@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "06fed997-ebdf-4697-9834-c091453efd57",
+		"name": "flytbase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32878722"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/users/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"John Doe\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/users/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkYWNmZGI5MzEyN2RmZGI0ZWFmNGQiLCJpYXQiOjE3MTc0MTUxNjZ9.rtvbNYGO6TGU72aSnRBJumiVl2k7xn1Ae9LlwAbGg2c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"johndoe@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sites",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/sites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkYWNmZGI5MzEyN2RmZGI0ZWFmNGQiLCJpYXQiOjE3MTc0MTUyMjd9.HFHQPRQSQ5eVx_uNscrgbv0nw_cQ2AxOrEM2-aLYu5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"site_name\": \"Test Site\",\r\n  \"position\": {\r\n    \"latitude\": 40.7128,\r\n    \"longitude\": -74.0060\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/sites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/sites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkNGYzMTVkNTFjNDk0NzEzMGU4NDIiLCJpYXQiOjE3MTczOTExODF9.KLIoWMVKB2GSgVtf7VMFoFNcqteUOoUs006WR04zG9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/sites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sites"
+							]
+						},
+						"description": "Get all site"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/sites/665c84bd683422de3a9ecbaa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkNGYzMTVkNTFjNDk0NzEzMGU4NDIiLCJpYXQiOjE3MTczOTExODF9.KLIoWMVKB2GSgVtf7VMFoFNcqteUOoUs006WR04zG9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"site_name\": \"Updated Berlin\",\r\n  \"position\": {\r\n    \"latitude\": \"18.324644\",\r\n    \"longitude\": \"72.654622\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/sites/665d50b0b5a1ce933db4da75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sites",
+								"665d50b0b5a1ce933db4da75"
+							]
+						},
+						"description": "Update Site"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/sites/665ca450683422de3a9ecbb1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkNGYzMTVkNTFjNDk0NzEzMGU4NDIiLCJpYXQiOjE3MTczOTExODF9.KLIoWMVKB2GSgVtf7VMFoFNcqteUOoUs006WR04zG9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/sites/665d50b0b5a1ce933db4da75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sites",
+								"665d50b0b5a1ce933db4da75"
+							]
+						},
+						"description": "Delete Site"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drone",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/drones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkYWNmZGI5MzEyN2RmZGI0ZWFmNGQiLCJpYXQiOjE3MTc0MTUyMjd9.HFHQPRQSQ5eVx_uNscrgbv0nw_cQ2AxOrEM2-aLYu5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Drone B\",\r\n  \"siteId\": \"665dad68b93127dfdb4eaf51\",\r\n  \"drone_type\": \"Type B\",\r\n  \"make_name\": \"Make B\",\r\n  \"category\": \"665db15db93127dfdb4eaf5a\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/drones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drones"
+							]
+						},
+						"description": "Add Drone"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/drones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/drones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drones"
+							]
+						},
+						"description": "Get Drones"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/drones/665ca4eb683422de3a9ecbbe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkYWNmZGI5MzEyN2RmZGI0ZWFmNGQiLCJpYXQiOjE3MTc0MTUyMjd9.HFHQPRQSQ5eVx_uNscrgbv0nw_cQ2AxOrEM2-aLYu5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Drone Name\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/drones/665ca4eb683422de3a9ecbbe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drones",
+								"665ca4eb683422de3a9ecbbe"
+							]
+						},
+						"description": "update Drone"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/drones/665ca6c8f0440b570631c4a4",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/drones/665ca6c8f0440b570631c4a4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drones",
+								"665ca6c8f0440b570631c4a4"
+							]
+						},
+						"description": "Delete Drone"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/drones/site/665dad68b93127dfdb4eaf51",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkYWNmZGI5MzEyN2RmZGI0ZWFmNGQiLCJpYXQiOjE3MTc0MTUyMjd9.HFHQPRQSQ5eVx_uNscrgbv0nw_cQ2AxOrEM2-aLYu5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/drones/site/665dad68b93127dfdb4eaf51",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drones",
+								"site",
+								"665dad68b93127dfdb4eaf51"
+							]
+						},
+						"description": "Get dron by site id "
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/drones/665ca4eb683422de3a9ecbbe/shift",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVkYWNmZGI5MzEyN2RmZGI0ZWFmNGQiLCJpYXQiOjE3MTc0MTUyMjd9.HFHQPRQSQ5eVx_uNscrgbv0nw_cQ2AxOrEM2-aLYu5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"newSiteId\": \"665db38fb93127dfdb4eaf78\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/drones/665ca4eb683422de3a9ecbbe/shift",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drones",
+								"665ca4eb683422de3a9ecbbe",
+								"shift"
+							]
+						},
+						"description": "shift the drone"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mission",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/missions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"site\": \"665c84bd683422de3a9ecbaa\",\r\n  \"name\": \"Test Mission\",\r\n  \"altitude\": 100,\r\n  \"speed\": 50,\r\n  \"waypoints\": [\r\n    {\r\n      \"latitude\": 12.34,\r\n      \"longitude\": 56.78,\r\n      \"altitude\": 20\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"missions"
+							]
+						},
+						"description": "Add Mission"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/missions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"missions"
+							]
+						},
+						"description": "Get all mission"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/missions/665ca7934b60ecf8a2c5f1ce",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Mission Name\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/missions/665ca7934b60ecf8a2c5f1ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"missions",
+								"665ca7934b60ecf8a2c5f1ce"
+							]
+						},
+						"description": "Update Mission"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/missions/665ca7934b60ecf8a2c5f1ce",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/missions/665ca7934b60ecf8a2c5f1ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"missions",
+								"665ca7934b60ecf8a2c5f1ce"
+							]
+						},
+						"description": "Delete Mission"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Test Category1\",\r\n  \"color\": \"Red\",\r\n  \"tag_name\": \"test-tag\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Add Category"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Get all Category"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/categories/665ca99500defc6b252001f1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/categories/665ca99500defc6b252001f1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories",
+								"665ca99500defc6b252001f1"
+							]
+						},
+						"description": "update category"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/categories/665ca99500defc6b252001f1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVjODJlYzY4MzQyMmRlM2E5ZWNiYTYiLCJpYXQiOjE3MTczMzg4NzR9.D7HwoweNsyCCKx4wF0AhOgSShPTe1pIzam-o06IzRAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/categories/665ca99500defc6b252001f1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories",
+								"665ca99500defc6b252001f1"
+							]
+						},
+						"description": "Delete Category"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
