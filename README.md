@@ -37,7 +37,7 @@ This project is a Drone Management System that allows users to manage drones, si
     npm start
     ```
 5. postman collection
-    ``` file called as flytbase.postman_collection
+    ``` refer the file named as flytbase.postman_collection ```
 
 ## steps to run
 1. Register the user with the below credentials
